@@ -10,6 +10,18 @@ var path = require('path');
 module.exports = function(app) {
 
   // Insert routes below
+  app.use('/api/employees', require('./api/employee'));
+  app.use('/api/prescriptions', require('./api/prescription'));
+  app.use('/api/treatments', require('./api/treatment'));
+  app.use('/api/diagnosiss', require('./api/diagnosis'));
+  app.use('/api/imaging_requests', require('./api/imaging_request'));
+  app.use('/api/lab_requests', require('./api/lab_request'));
+  app.use('/api/consultations', require('./api/consultation'));
+  app.use('/api/documents', require('./api/document'));
+  app.use('/api/tasks', require('./api/task'));
+  app.use('/api/medics', require('./api/medic'));
+  app.use('/api/patients', require('./api/patient'));
+  app.use('/api/departments', require('./api/department'));
   app.use('/api/things', require('./api/thing'));
   app.use('/api/users', require('./api/user'));
 

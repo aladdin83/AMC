@@ -18,6 +18,18 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/employee/employee.socket').register(socket);
+  require('../api/prescription/prescription.socket').register(socket);
+  require('../api/treatment/treatment.socket').register(socket);
+  require('../api/diagnosis/diagnosis.socket').register(socket);
+  require('../api/imaging_request/imaging_request.socket').register(socket);
+  require('../api/lab_request/lab_request.socket').register(socket);
+  require('../api/consultation/consultation.socket').register(socket);
+  require('../api/document/document.socket').register(socket);
+  require('../api/task/task.socket').register(socket);
+  require('../api/medic/medic.socket').register(socket);
+  require('../api/patient/patient.socket').register(socket);
+  require('../api/department/department.socket').register(socket);
   require('../api/thing/thing.socket').register(socket);
 }
 
