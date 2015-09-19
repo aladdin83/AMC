@@ -8,6 +8,9 @@
 var sqldb = require('../sqldb');
 var Thing = sqldb.Thing;
 var User = sqldb.User;
+var Bill = sqldb.Bill;
+
+Bill.sync();
 
 Thing.sync()
   .then(function() {

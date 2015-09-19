@@ -18,6 +18,27 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/appointment/appointment.socket').register(socket);
+  require('../api/transaction/transaction.socket').register(socket);
+  require('../api/expense/expense.socket').register(socket);
+  require('../api/account/account.socket').register(socket);
+  require('../api/memo/memo.socket').register(socket);
+  require('../api/vendor/vendor.socket').register(socket);
+  require('../api/purchase/purchase.socket').register(socket);
+  require('../api/invoice/invoice.socket').register(socket);
+  require('../api/supply_item/supply_item.socket').register(socket);
+  require('../api/alert/alert.socket').register(socket);
+  require('../api/note/note.socket').register(socket);
+  require('../api/message/message.socket').register(socket);
+  require('../api/country/country.socket').register(socket);
+  require('../api/treatment_type/treatment_type.socket').register(socket);
+  require('../api/lab_test/lab_test.socket').register(socket);
+  require('../api/imaging_test/imaging_test.socket').register(socket);
+  require('../api/prescription_entry/prescription_entry.socket').register(socket);
+  require('../api/drug/drug.socket').register(socket);
+  require('../api/patient_appointment/patient_appointment.socket').register(socket);
+  require('../api/bill/bill.socket').register(socket);
+  require('../api/contact/contact.socket').register(socket);
   require('../api/employee/employee.socket').register(socket);
   require('../api/prescription/prescription.socket').register(socket);
   require('../api/treatment/treatment.socket').register(socket);

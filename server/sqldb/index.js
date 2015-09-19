@@ -15,6 +15,27 @@ var db = {
 };
 
 // Insert models below
+db.Appointment = db.sequelize.import('../api/appointment/appointment.model');
+db.Transaction = db.sequelize.import('../api/transaction/transaction.model');
+db.Expense = db.sequelize.import('../api/expense/expense.model');
+db.Account = db.sequelize.import('../api/account/account.model');
+db.Memo = db.sequelize.import('../api/memo/memo.model');
+db.Vendor = db.sequelize.import('../api/vendor/vendor.model');
+db.Purchase = db.sequelize.import('../api/purchase/purchase.model');
+db.Invoice = db.sequelize.import('../api/invoice/invoice.model');
+db.SupplyItem = db.sequelize.import('../api/supply_item/supply_item.model');
+db.Alert = db.sequelize.import('../api/alert/alert.model');
+db.Note = db.sequelize.import('../api/note/note.model');
+db.Message = db.sequelize.import('../api/message/message.model');
+db.Country = db.sequelize.import('../api/country/country.model');
+db.TreatmentType = db.sequelize.import('../api/treatment_type/treatment_type.model');
+db.LabTest = db.sequelize.import('../api/lab_test/lab_test.model');
+db.ImagingTest = db.sequelize.import('../api/imaging_test/imaging_test.model');
+db.PrescriptionEntry = db.sequelize.import('../api/prescription_entry/prescription_entry.model');
+db.Drug = db.sequelize.import('../api/drug/drug.model');
+db.PatientAppointment = db.sequelize.import('../api/patient_appointment/patient_appointment.model');
+db.Bill = db.sequelize.import('../api/bill/bill.model');
+db.Contact = db.sequelize.import('../api/contact/contact.model');
 db.Employee = db.sequelize.import('../api/employee/employee.model');
 db.Prescription = db.sequelize.import('../api/prescription/prescription.model');
 db.Treatment = db.sequelize.import('../api/treatment/treatment.model');
@@ -30,5 +51,6 @@ db.Department = db.sequelize.import('../api/department/department.model');
 db.User = db.sequelize.import('../api/user/user.model');
 db.Thing = db.sequelize.import('../api/thing/thing.model');
 
+db.sequelize.sync({force: true});
 
 module.exports = db;

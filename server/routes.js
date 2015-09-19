@@ -10,6 +10,27 @@ var path = require('path');
 module.exports = function(app) {
 
   // Insert routes below
+  app.use('/api/appointments', require('./api/appointment'));
+  app.use('/api/transactions', require('./api/transaction'));
+  app.use('/api/expenses', require('./api/expense'));
+  app.use('/api/accounts', require('./api/account'));
+  app.use('/api/memos', require('./api/memo'));
+  app.use('/api/vendors', require('./api/vendor'));
+  app.use('/api/purchases', require('./api/purchase'));
+  app.use('/api/invoices', require('./api/invoice'));
+  app.use('/api/supply_items', require('./api/supply_item'));
+  app.use('/api/alerts', require('./api/alert'));
+  app.use('/api/notes', require('./api/note'));
+  app.use('/api/messages', require('./api/message'));
+  app.use('/api/countries', require('./api/country'));
+  app.use('/api/treatment_types', require('./api/treatment_type'));
+  app.use('/api/lab_tests', require('./api/lab_test'));
+  app.use('/api/imaging_tests', require('./api/imaging_test'));
+  app.use('/api/prescription_entries', require('./api/prescription_entry'));
+  app.use('/api/drugs', require('./api/drug'));
+  app.use('/api/patient_appointments', require('./api/patient_appointment'));
+  app.use('/api/bills', require('./api/bill'));
+  app.use('/api/contacts', require('./api/contact'));
   app.use('/api/employees', require('./api/employee'));
   app.use('/api/prescriptions', require('./api/prescription'));
   app.use('/api/treatments', require('./api/treatment'));
