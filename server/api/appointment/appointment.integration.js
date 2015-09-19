@@ -35,8 +35,13 @@ describe('Appointment API:', function() {
       request(app)
         .post('/api/appointments')
         .send({
-          name: 'New Appointment',
-          info: 'This is the brand new appointment!!!'
+          info: 'This is the brand new appointment!!!',
+          active: true,
+          appointmentDate: Date.now(),
+          status: 'pending',
+          durations: 10,
+          access: 'public',
+          complaint: 'complaint'
         })
         .expect(201)
         .expect('Content-Type', /json/)
@@ -50,7 +55,6 @@ describe('Appointment API:', function() {
     });
 
     it('should respond with the newly created appointment', function() {
-      newAppointment.name.should.equal('New Appointment');
       newAppointment.info.should.equal('This is the brand new appointment!!!');
     });
 
@@ -78,7 +82,7 @@ describe('Appointment API:', function() {
     });
 
     it('should respond with the requested appointment', function() {
-      appointment.name.should.equal('New Appointment');
+      
       appointment.info.should.equal('This is the brand new appointment!!!');
     });
 
@@ -91,7 +95,6 @@ describe('Appointment API:', function() {
       request(app)
         .put('/api/appointments/' + newAppointment._id)
         .send({
-          name: 'Updated Appointment',
           info: 'This is the updated appointment!!!'
         })
         .expect(200)
@@ -110,7 +113,7 @@ describe('Appointment API:', function() {
     });
 
     it('should respond with the updated appointment', function() {
-      updatedAppointment.name.should.equal('Updated Appointment');
+      
       updatedAppointment.info.should.equal('This is the updated appointment!!!');
     });
 

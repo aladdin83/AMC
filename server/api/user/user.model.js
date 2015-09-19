@@ -39,9 +39,6 @@ module.exports = function(sequelize, DataTypes) {
     salt: DataTypes.STRING
 
   }, {
-    
-    paranoid: false,
-
     /**
      * Virtual Getters
      */

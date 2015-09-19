@@ -51,6 +51,12 @@ db.Department = db.sequelize.import('../api/department/department.model');
 db.User = db.sequelize.import('../api/user/user.model');
 db.Thing = db.sequelize.import('../api/thing/thing.model');
 
+//Setting up Relations
+
+db.Appointment.belongsTo(db.Patient);
+
+
+
 db.sequelize.sync({force: true});
 
 module.exports = db;
