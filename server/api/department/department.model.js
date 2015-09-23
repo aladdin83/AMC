@@ -10,6 +10,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     name: DataTypes.STRING,
     info: DataTypes.STRING,
-    active: DataTypes.BOOLEAN
+    active: DataTypes.BOOLEAN,
+    description: DataTypes.TEXT
   });
 };

@@ -53,10 +53,26 @@ db.Thing = db.sequelize.import('../api/thing/thing.model');
 
 //Setting up Relations
 
+// APPOINTMENT
 db.Appointment.belongsTo(db.Patient);
+db.Appointment.belongsTo(db.Medic);
+db.Appointment.belongsTo(db.Department);
+db.Appointment.belongsTo(db.User, {as: 'CreatedBy'})
+
+// CONSULTATION
+db.Consultation.belongsTo(db.Medic);
+db.Consultation.belongsTo(db.Patient);
+db.Consultation.belongsTo(db.User, {as: 'CreatedBy'});
+
+// MEDIC
+db.Medic.belongsTo(db.User);
+db.Medic.belongsTo(db.Department);
+db.Medic.belongsTo(db.User, {as: 'CreatedBy'});
 
 
-
-db.sequelize.sync({force: true});
+// Diagnosis
+db.Diagnosis.belongsTo(db.Medic);
+db.Diagnosis.belongsTo(db.Consultation);
+db.Diagnosis.belongsTo(db.User, {as: 'CreatedBy'});
 
 module.exports = db;

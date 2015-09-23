@@ -10,6 +10,13 @@ module.exports = function(sequelize, DataTypes) {
     },
     name: DataTypes.STRING,
     info: DataTypes.STRING,
-    active: DataTypes.BOOLEAN
+    active: DataTypes.BOOLEAN,
+    tite: DataTypes.BOOLEAN,
+    diagnosis_type: {
+      type: DataTypes.ENUM,
+      values: ['differenial', 'final']
+    },
+    diagnosis_date: DataTypes.DATE,
+    details: DataTypes.TEXT
   });
 };

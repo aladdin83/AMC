@@ -10,6 +10,14 @@ module.exports = function(sequelize, DataTypes) {
     },
     name: DataTypes.STRING,
     info: DataTypes.STRING,
-    active: DataTypes.BOOLEAN
+    active: DataTypes.BOOLEAN,
+    medical_condition: DataTypes.TEXT,
+    complaint: DataTypes.TEXT,
+    access: {
+      type: DataTypes.ENUM,
+      values: ['private', 'public']
+    }
+  },{
+    paranoid: true
   });
 };

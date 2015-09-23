@@ -7,6 +7,10 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 /**
  * App-wide Styles
  */
+ 
+ $primary-color: #2dc3e8;
+ $navbar-text-color: #fff;
+ 
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -15,11 +19,41 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
   padding: 0.2em 0;
 }
 
+
+.main-container{
+  position: static;
+  padding: 0px;
+  
+  >.page-container{
+    position: relative;
+    top: 20px;
+  }
+  
+}
+
+.page-content{
+  display: block;
+  margin-left: 224px;
+  margin-right: 0;
+  margin-top:0;
+  min-height: 100%;
+  padding: 0;
+}
+
 // Component styles are injected through grunt
 // injector
 @import 'account/login/login.scss';
 @import 'admin/admin.scss';
+@import 'calendar/calendar.scss';
+@import 'colors.scss';
+@import 'dashboard/dashboard.scss';
 @import 'main/main.scss';
+@import 'messages/messages.scss';
+@import 'mixin.scss';
+@import 'patients/patients.scss';
+@import 'settings/settings.scss';
 @import '../components/footer/footer.scss';
 @import '../components/modal/modal.scss';
+@import '../components/navbar/navbar.scss';
+@import '../components/sidebar/sidebar.scss';
 // endinjector
