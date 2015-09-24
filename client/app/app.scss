@@ -33,7 +33,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 
 .page-content{
   display: block;
-  margin-left: 224px;
+  margin-left: 60px;
   margin-right: 0;
   margin-top:0;
   min-height: 100%;
@@ -47,7 +47,6 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import 'calendar/calendar.scss';
 @import 'colors.scss';
 @import 'dashboard/dashboard.scss';
-@import 'main/main.scss';
 @import 'messages/messages.scss';
 @import 'mixin.scss';
 @import 'patients/patients.scss';

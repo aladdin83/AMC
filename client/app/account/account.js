@@ -25,10 +25,10 @@ angular.module('mcmsApp')
         templateUrl: 'app/account/signup/signup.html',
         controller: 'SignupCtrl'
       })
-      .state('settings', {
-        url: '/settings',
+      .state('account_settings', {
+        url: '/account_settings',
         templateUrl: 'app/account/settings/settings.html',
-        controller: 'SettingsCtrl',
+        controller: 'AccountSettingsCtrl',
         authenticate: true
       });
   })
