@@ -36,7 +36,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     provider: DataTypes.STRING,
-    salt: DataTypes.STRING
+    salt: DataTypes.STRING,
 
   }, {
     /**

@@ -8,9 +8,18 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
  * App-wide Styles
  */
  
- $primary-color: #2dc3e8;
- $navbar-text-color: #fff;
  
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #fff;
+  
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+    
+}
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -21,29 +30,39 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 
 
 .main-container{
-  position: static;
+  position: absolute;
   padding: 0px;
+  height: 100%;
+  top:0px;
+  width: 100%;
   
   >.page-container{
-    position: relative;
-    top: 20px;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
   }
   
 }
 
 .page-content{
   display: block;
-  margin-left: 60px;
-  margin-right: 0;
+  position: absolute;
   margin-top:0;
   min-height: 100%;
-  padding: 0;
+  padding-top: 0px;
+  width: 100%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }
 
 // Component styles are injected through grunt
 // injector
 @import 'account/login/login.scss';
 @import 'admin/admin.scss';
+@import 'assets.scss';
 @import 'calendar/calendar.scss';
 @import 'colors.scss';
 @import 'dashboard/dashboard.scss';
@@ -56,3 +75,28 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import '../components/navbar/navbar.scss';
 @import '../components/sidebar/sidebar.scss';
 // endinjector
+
+// SIDE PANEL //
+
+.side-panel{
+	background-color: $side-panel-background;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  height: 100%;	
+  width: 370px;
+  left: 90px;
+  overflow: hidden;
+  padding-top: 20px;
+  color: $side-panel-color;
+  
+  .side-panel-controls{
+		padding: 15px;
+	}
+}
+
+// Inputs
+input, textarea{
+		border: none;
+		outline: none;
+}

@@ -15,6 +15,8 @@ var db = {
 };
 
 // Insert models below
+db.VitalReading = db.sequelize.import('../api/vital_reading/vital_reading.model');
+db.Facility = db.sequelize.import('../api/facility/facility.model');
 db.Appointment = db.sequelize.import('../api/appointment/appointment.model');
 db.Transaction = db.sequelize.import('../api/transaction/transaction.model');
 db.Expense = db.sequelize.import('../api/expense/expense.model');
@@ -49,14 +51,13 @@ db.Medic = db.sequelize.import('../api/medic/medic.model');
 db.Patient = db.sequelize.import('../api/patient/patient.model');
 db.Department = db.sequelize.import('../api/department/department.model');
 db.User = db.sequelize.import('../api/user/user.model');
-db.Thing = db.sequelize.import('../api/thing/thing.model');
 
 //Setting up Relations
 
 // APPOINTMENT
 db.Appointment.belongsTo(db.Patient);
 db.Appointment.belongsTo(db.Medic);
-db.Appointment.belongsTo(db.Department);
+db.Appointment.belongsTo(db.Facility);
 db.Appointment.belongsTo(db.User, {as: 'CreatedBy'})
 
 // CONSULTATION

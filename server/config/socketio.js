@@ -18,6 +18,8 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/vital_reading/vital_reading.socket').register(socket);
+  require('../api/facility/facility.socket').register(socket);
   require('../api/appointment/appointment.socket').register(socket);
   require('../api/transaction/transaction.socket').register(socket);
   require('../api/expense/expense.socket').register(socket);
@@ -51,7 +53,6 @@ function onConnect(socket) {
   require('../api/medic/medic.socket').register(socket);
   require('../api/patient/patient.socket').register(socket);
   require('../api/department/department.socket').register(socket);
-  require('../api/thing/thing.socket').register(socket);
 }
 
 module.exports = function(socketio) {

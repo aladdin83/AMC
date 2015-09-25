@@ -7,7 +7,7 @@ angular.module('mcmsApp')
       'state': 'main'
     }];
 
-    $scope.hideNavBar = $location.path() == '/login';
+    $scope.hideNavBar = $location.path() === '/login';
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;

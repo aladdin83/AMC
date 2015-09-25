@@ -35,7 +35,10 @@ describe('Patient API:', function() {
       request(app)
         .post('/api/patients')
         .send({
-          name: 'New Patient',
+          title: 'mr',
+          first_name: 'fname',
+          middle_name: 'mname',
+          last_name: 'lname',
           info: 'This is the brand new patient!!!'
         })
         .expect(201)
@@ -50,7 +53,7 @@ describe('Patient API:', function() {
     });
 
     it('should respond with the newly created patient', function() {
-      newPatient.name.should.equal('New Patient');
+      newPatient.fullName.should.equal('mr fname mname lname');
       newPatient.info.should.equal('This is the brand new patient!!!');
     });
 
@@ -78,7 +81,7 @@ describe('Patient API:', function() {
     });
 
     it('should respond with the requested patient', function() {
-      patient.name.should.equal('New Patient');
+      patient.fullName.should.equal('mr fname mname lname');
       patient.info.should.equal('This is the brand new patient!!!');
     });
 
