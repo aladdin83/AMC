@@ -1,2 +1,3 @@
-# AMC
-AMC is a Medical Centre Managment Webapp based on MEAN stack
+# MCMS - HEKA
+HEKA is an open source EHR System based on angular-fullstack
+
