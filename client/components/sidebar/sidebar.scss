@@ -1,0 +1,51 @@
+.page-sidebar{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	width: 90px;
+	display: block;
+	overflow: hidden;
+	z-index: 10000;
+	height: 100%;
+	background-color: $sidebar-background;
+	
+	.logo{
+		background: url($logo_image);
+		height: 90px;
+		width: 90px;
+	}
+	
+	@include transition(width 0.5s ease-in);
+	ul.sidebar-menu{
+		
+		@include opacity(0.95);
+		
+		li{
+			text-align: center;
+			
+			a{
+				@include transition(background-color 0.5s);
+				@include transition(opacity 0.5s);
+				@include opacity(0.5);
+				color: $sidebar-icon-color;
+			}
+			
+			a:hover{
+				@include opacity(1);
+				background-color: transparent;		
+			}	
+		}
+		
+		li.hover{
+			
+		}
+		
+		li.active{
+			a{
+				@include opacity(1);
+				background-color: $sidebar-active-background;	
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+
+	<div class="side-panel">
+		<div class="side-panel-controls">
+			<button class="btn"><i class="fa fa-plus fa-lg"></i> New Patient</button>
+		</div>
+		<div class="patients-search">
+			<form name="patientsSearchForm">
+				<input name="searchInput" ng-model="selectedResult" class="form-control search" type="text" placeholder="Search patient name, phone number ...">
+				<span class="icon-container">
+					<i ng-hide="fetchingResults || searchForm.searchInput.$viewValue" class="spyglass ng-hide fa fa-search fa-lg" style=""></i>
+					<i ng-hide="fetchingResults || !searchForm.searchInput.$viewValue" ng-click="clearSearch()" class="remove fa fa-cross" style=""></i>
+					<i ng-show="fetchingResults" class="spin glyphicon glyphicon-refresh ng-hide" style=""></i>
+				</span>	
+			</form>
+		</div>
+		<ul class="search-results">
+			<li class="patient-card" ng-repeat="patient in patients" ng-click="openProfile(patient)">
+				<div class="patient-fullname">{{patient.fullName}}</div>
+			</li>
+		</ul>
+		
+	</div>
+	<div class="patient-profile">
+		<h1>{{patient.fullName}}</h1>
+		
+		<div class="appointemts-history">
+			<h2>Appointments History</h2>
+			<button>Request Appointemnt</button>
+		</div>
+		<div class="notes">
+			<h2>Notes</h2>
+		</div>
+	</div>

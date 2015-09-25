@@ -1,0 +1,12 @@
+<div class="page-sidebar" id="sidebar" ng-controller="SidebarCtrl">
+	<div class="sidebar-header-wrapper">
+		<div class="logo"></div>
+	</div>
+	<ul class="nav sidebar-menu">
+		<li ng-repeat="item in menu" ui-sref-active="active">
+			<a ui-sref="{{item.state}}">
+				<i ng-class="item.iconClass"></i>
+			</a>
+		</li>
+	</ul>
+</div>

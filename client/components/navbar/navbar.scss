@@ -1,0 +1,100 @@
+.navbar{
+	padding: 0;
+	margin: 0;
+	border: none;
+	height: 45px;
+	min-height: 45px;
+	z-index: 200;
+	position: absolute;
+	left: 420px;
+	right: 0px;
+	top: 0px;
+	
+	.navbar-inner{
+		border: 0px;
+		@include border-radius(0px);
+		background-clip: padding-box;
+		margin: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+		min-height: 45px;
+		position: relative;
+		background: none;
+		
+		.navbar-container{
+			padding-left: 10px;
+		}
+		
+	}
+	
+	.navbar-brand{
+		color: $navbar-text-color;
+		font-size: 24px;
+		text-shadow: none;
+		padding: 2px 0 2px 0;
+		font-weight: 200;
+		height: 45px;
+	}
+	
+	.sidebar-collapse{
+		text-align: center;
+		padding: 0px;
+		position: absolute;
+		left: 189px;
+		top: 0px;
+		z-index: 2;
+		width: 35px;
+		height: 45px; 
+		
+	}
+	
+	.navbar-header{
+		
+		.navbar-account{
+			height: 45px;
+			
+			.account-area, settings{
+				@include transform-style(preserve-3d);
+				@include backface-visibility(hidden);
+				@include transition(.9s);
+			}
+			
+			.account-area{
+				position: absolute;
+				top:0px;
+				right: 50px;
+				zoom: 1;
+				@include opacity(1);
+				list-style: none;
+				margin-bottom: 0;
+				display: inline-block;
+			}
+			
+			.account-area > li{
+				float: left;
+				position: relative;
+				height: 45px;
+			}
+			
+			.account-area > li > a{
+				position: relative;
+    			min-width: 50px;
+    			height: 45px;
+    			display: inline-block;
+				text-decoration: none;
+			}
+			.account-area > li > a .icon{
+				display: block;
+    			color: $navbar-text-color;
+    			font-size: 16px;
+    			line-height: 48px;
+    			text-align: center;
+    			@include transition(line-height .3s ease);
+			}
+			
+			
+			
+		}
+	}
+	
+}

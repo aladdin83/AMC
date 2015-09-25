@@ -1,0 +1,35 @@
+.patients-search{
+	padding: 0 15px;
+	
+	.search{
+		background-color: $sidebar-background;
+		color: #dfdfdf;
+	}
+	
+	.icon-container {
+		position: relative;
+		float: right;
+		display: block;
+		padding-right: 10px;
+		margin-top: -25px;
+		color: #d0d1d2;
+	}
+	
+}
+
+.search-results{
+	overflow: scroll;
+	height: 80%;
+	list-style: none;
+	padding-left: 15px;
+	.patient-card{
+		padding: 10px 15px;
+		cursor: pointer;
+	}
+	
+}
+
+.patient-profile{
+	margin-left: 370px + 90px;
+	padding: 45px 15px;
+}
