@@ -73,7 +73,7 @@ module.exports = function(sequelize, DataTypes) {
     prefered_contact_method: {
       type: DataTypes.ENUM,
       values: ['Mobile', 'Home Phone', 'Work Phone', 'Email', 'SMS']
-    }
+    },
     
     //Address
     home_address: DataTypes.TEXT,
@@ -118,6 +118,11 @@ module.exports = function(sequelize, DataTypes) {
             this.getDataValue('last_name')
           ]
           return fullName.join(' ');
+        },
+        age: function(){
+          var birthday = new Date(this.getDataValue('birthday'));
+          var today = new Date();
+          return (today.getFullYear() - birthday.getFullYear());
         }
       }  
   });

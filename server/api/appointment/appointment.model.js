@@ -29,6 +29,10 @@ module.exports = function(sequelize, DataTypes) {
       comment: 'if Private it will only be visible to the Creator, Department, and Medic specified'
     },
     complaint: DataTypes.TEXT,
+    appointment_type: {
+      type: DataTypes.ENUM,
+      values: ['Follow-Up Visit', 'New Patient Visit','Nursing Only', 'Urgent Visit', 'Wellness Exam']
+    }
   },{
     paranoid: true
   });

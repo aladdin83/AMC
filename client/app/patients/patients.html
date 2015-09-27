@@ -14,15 +14,34 @@
 			</form>
 		</div>
 		<ul class="search-results">
-			<li class="patient-card" ng-repeat="patient in patients" ng-click="openProfile(patient)">
-				<div class="patient-fullname">{{patient.fullName}}</div>
+			<li class="patient-card" ng-repeat="patient in patients" ui-sref-active="active">
+				<a class="patient-fullname" ui-sref="patientProfile({id: patient._id})">{{patient.fullName}}</a>
 			</li>
 		</ul>
 		
 	</div>
 	<div class="patient-profile">
-		<h1>{{patient.fullName}}</h1>
-		
+		<div class="patient-profile-header">
+			<h1>{{patient.fullName}}</h1>
+			<div class="basic-info">
+				<ul>
+					<li><i class="fa fa-mobile"></i> {{patient.mobile}}</li>
+					<li>{{patient.email}}</li>
+					<li>{{patient.age}} yrs</li>
+					<li>{{patient.gender}}</li>
+				</ul>
+			</div>
+			<div class="patient-profile-nav">
+				<ul class="simple-nav">
+					<li class="active">Summary</li>
+					<li>Medications</li>
+					<li>History</li>
+					<li>Allergies</li>
+					<li>Vitals</li>
+					<li>Notes</li>
+				</ul>
+			</div>	
+		</div>
 		<div class="appointemts-history">
 			<h2>Appointments History</h2>
 			<button>Request Appointemnt</button>

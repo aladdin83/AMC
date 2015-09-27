@@ -1,0 +1,21 @@
+<div class="patient-profile">
+		<div class="patient-profile-header">
+			<h1>{{patient.fullName}}</h1>
+			<div class="basic-info">
+				<ul>
+					<li><i class="fa fa-mobile"></i> {{patient.mobile}}</li>
+					<li>{{patient.email}}</li>
+					<li>{{patient.age}} yrs</li>
+					<li>{{patient.gender}}</li>
+				</ul>
+			</div>
+			<div class="patient-profile-nav">
+				<ul class="simple-nav">
+					<li ng-repeat="item in profileMenu" ui-sref-active="active">
+						<a ui-sref="{{item.state}}">{{item.title}}</a>
+					</li>
+				</ul>
+			</div>	
+		</div>
+		<div ui-view></div>
+	</div>

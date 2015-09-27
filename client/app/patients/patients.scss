@@ -30,6 +30,38 @@
 }
 
 .patient-profile{
-	margin-left: 370px + 90px;
+	margin-left: 90px;
 	padding: 45px 15px;
+}
+
+.patient-profile-header{
+	h1{
+		margin: 0px;
+		font-weight: lighter;
+	}
+	
+	.basic-info{
+		ul{
+			list-style: none;
+			padding: 0px;
+			overflow: hidden;
+			
+			:first-child{
+				margin-left: 0px;
+			}
+			
+			li{
+				float: left;
+				margin-left: 10px;
+				color: $text-color-light;
+			}
+		}
+	}
+}
+
+.patient-profile-nav{
+	text-align: center;
+	.simple-nav{
+		display: inline-block;
+	}
 }
