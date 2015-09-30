@@ -26,6 +26,9 @@ angular.module('mcmsApp')
       },{
         'title': 'Notes',
         'state': '.notes'
+      },{
+        'title': 'Documents',
+        'state': '.documents'
       }
     ]
     

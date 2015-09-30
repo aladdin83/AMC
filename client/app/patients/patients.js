@@ -18,19 +18,28 @@ angular.module('mcmsApp')
         templateUrl: 'app/patients/patient_profile.summery.html' 
       })
       .state('patientProfile.medications',{
-        url: '/medications'
+        url: '/medications',
+        templateUrl: 'app/patients/patient_profile.medications.html'
       })
       .state('patientProfile.history',{
-        url: '/history'
+        url: '/history',
+        templateUrl: 'app/patients/patient_profile.history.html'
       })
       .state('patientProfile.allergies',{
-        url: '/allergies'
+        url: '/allergies',
+        templateUrl: 'app/patients/patient_profile.allergies.html'
       })
       .state('patientProfile.vitals',{
-        url: '/vitals'
+        url: '/vitals',
+        templateUrl: 'app/patients/patient_profile.vitals.html'
       })
       .state('patientProfile.notes',{
-        url: '/notes'
+        url: '/notes',
+        templateUrl: 'app/patients/patient_profile.notes.html'
+      })
+      .state('patientProfile.documents',{
+        url: '/documents',
+        templateUrl: 'app/patients/patient_profile.documents.html'
       })
       ;
   });
